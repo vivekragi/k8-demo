@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: docker-spring-boot
+  labels:
+    name: docker-spring-boot
+spec:
+  ports:
+    - port: 8085
+      targetPort: 8085
+      protocol: TCP
+  selector:
+    app: docker-spring-boot
+  type: LoadBalancer
