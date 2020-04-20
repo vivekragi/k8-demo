@@ -26,3 +26,18 @@ Link to Brandon Potter's YML builder - https://static.brandonpotter.com/kubernet
 Commands to Create/Update:
 kubectl apply -f deployment.yml
 kubectl apply -f service.yml
+
+Docker Commands:
+
+Build:
+docker build -f Dockerfile -t img_name .
+    
+Images:
+docker images
+
+Run an image:
+docker run -p 8085:8085 img_name
+
+Pushing to GCR:
+docker tag img_name gcr.io/project_id/img_name
+docker push gcr.io/project_id/img_name
