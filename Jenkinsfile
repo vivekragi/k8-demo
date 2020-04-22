@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    tools {
+      
+      jdk "java"
+      gradle "gradle"
+      
+      
+   }
     stages {
         stage('pulling from git'){
               steps{
