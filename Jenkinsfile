@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('pulling from git'){
+              steps{
+                echo 'git pulling successful'
+                git credentialsId: 'd7b92d77-ae14-4718-8282-5552c33d6dff', url: 'https://github.com/vivekragi/k8-demo.git'
+              }
+           }
         stage("Build the project") {
             steps {
                 sh 'chmod +x gradlew'
