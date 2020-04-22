@@ -3,6 +3,10 @@ Demo for 23rd April 2020, Sample Spring boot application with one rest end point
 
 **Kubernetes Commands**
 
+**Login to cluster**
+
+gcloud container clusters get-credentials techprimer-cluster-1 --zone us-central1-a
+
 **List Pods:**
 
 kubectl get pods
